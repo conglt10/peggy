@@ -8,7 +8,7 @@ import (
 	"os/signal"
 	"strings"
 	"syscall"
-
+	_ "fmt"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/client/rpc"
 	"github.com/cosmos/cosmos-sdk/codec"
@@ -178,6 +178,7 @@ func RunGenerateBindingsCmd(cmd *cobra.Command, args []string) error {
 	// Compile contracts, generating contract bins and abis
 	err := contract.CompileContracts(contracts)
 	if err != nil {
+		// fmt.Println(err);
 		return err
 	}
 
