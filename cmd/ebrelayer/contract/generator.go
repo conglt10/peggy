@@ -22,6 +22,7 @@ var (
 		"--allow-paths ./,"},
 		"")
 	// BaseBindingGenCmd is the base command for contract binding generation
+
 	BaseBindingGenCmd = strings.Join([]string{"abigen ",
 		fmt.Sprintf("--bin ./contract/generated/bin/%s/%s.bin ", ContractText, ContractText),
 		fmt.Sprintf("--abi ./contract/generated/abi/%s/%s.abi ", ContractText, ContractText),
