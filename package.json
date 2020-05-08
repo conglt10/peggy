@@ -8,6 +8,9 @@
   "workspaces": [
     "testnet-contracts"
   ],
+  "dependencies": {
+    "openzeppelin-solidity": "^2.1.3"
+  },
   "scripts": {
     "relayer-1": "ebrelayer init ethereum ws://localhost:7545/  0x30753E4A8aad7F8597332E813735Def5dD395028 validator --make-claims=true --chain-id=peggy",
     "relayer-2": "ebrelayer init ethereum ws://localhost:7545/  0x30753E4A8aad7F8597332E813735Def5dD395028 validator --chain-id=peggy",

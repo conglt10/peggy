@@ -2,6 +2,7 @@ package contract
 
 import (
 	"fmt"
+	"bytes"
 	"os/exec"
 	"strings"
 )
@@ -21,6 +22,7 @@ var (
 		"--allow-paths *,"},
 		"")
 	// BaseBindingGenCmd is the base command for contract binding generation
+
 	BaseBindingGenCmd = strings.Join([]string{"abigen ",
 		fmt.Sprintf("--bin ./cmd/ebrelayer/contract/generated/bin/%s/%s.bin ", ContractText, ContractText),
 		fmt.Sprintf("--abi ./cmd/ebrelayer/contract/generated/abi/%s/%s.abi ", ContractText, ContractText),
